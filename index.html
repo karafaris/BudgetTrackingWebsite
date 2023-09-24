@@ -44,6 +44,10 @@
 .jumbotron h2  {
     color: #0fd8b0; /* Text color in the About section */
 }
+
+budget-tracker-section  {
+    color: #0fd8b0; /* Text color in the About section */
+}
     </style>
 
 
@@ -74,6 +78,29 @@
 
     </section>
 </div>
+
+<div class="jumbotron p-23 p-md-3 text-blue rounded bg-white">
+    <div class="col-md-6 px-0">
+    <h2 class="display-4 font-regular">Budget Tracker</h2>
+
+
+    <div class="content-left floatleft">
+        <div class="enter-budget-box">
+          <label for="budget">Enter Your Budget</label><br />
+          <input type="text" placeholder="(e.g >$1.00)" id="expense-title" /><br />
+          </select>
+          <button id="add-budget-btn">Start</button>
+          <button id="reset-app-btn">Clear</button>
+        </div>
+        <div class="add-expense-box">
+          <label for="expense">Please Enter Your Expense Title</label><br />
+          <input type="text" placeholder="(e.g Car Insurance)" id="expense-title" /><br />
+          <label for="expense-amount">Please Enter Expense Amount</label> <br />
+          <input type="text" placeholder="(e.g $0.00)" id="expense-amount" /><br />
+          <button id="add-expense-btn">Add Expense</button>
+        </div>
+      </div>
+
 
 </body>
 </html>
