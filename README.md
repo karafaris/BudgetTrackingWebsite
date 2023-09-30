@@ -16,6 +16,11 @@ About Us Section
 Budget Tracker Section
 ![Budget-Tracker-Section](assets/budget-tracker-section.png)
 
+## Heroku URL
+
+## GitHub Repository 
+https://github.com/karafaris/BudgetTrackingWebsite.git
+
 ## Credits
 Kara Faris - Github: @karafaris
 Mark Podrabinnik - GitHub: @markymark97
