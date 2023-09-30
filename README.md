@@ -14,7 +14,7 @@ About Us Section
 ![About-Us-Section](assets/about-us-section.png)
 
 Budget Tracker Section
-![Budget-Tracker-Section](assets/budget-tracker-about-section.jpg)
+![Budget-Tracker-Section](assets/budget-tracker-section.png)
 
 ## Credits
 Kara Faris - Github: @karafaris
