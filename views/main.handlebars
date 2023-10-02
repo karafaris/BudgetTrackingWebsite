@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+</head>
+<body>
+    <header>
+        
+    </header>
+    <main>
+        <div class="container">
+            {{!-- Signup Form --}}
+            <div class="card" id="signup-card">
+                <h2>Sign Up</h2>
+                <form id="signup-form">
+                    <label for="email-signup">Email:</label>
+                    <input type="email" id="email-signup" name="email" required>
+                    <label for="password-signup">Password:</label>
+                    <input type="password" id="password-signup" name="password" required>
+                    <button type="submit">Sign Up</button>
+                </form>
+            </div>
+
+            {{!-- Login Form --}}
+            <div class="card" id="login-card">
+                <h2>Login</h2>
+                <form id="login-form">
+                    <label for="email-login">Email:</label>
+                    <input type="email" id="email-login" name="email" value="random_email@example.com" required>
+                    <label for="password-login">Password:</label>
+                    <input type="password" id="password-login" name="password" required>
+                    <button type="submit">Login</button>
+                </form>
+            </div>
+        </div>
+    </main>
+    <footer>
+    
+</body>
+</html>
