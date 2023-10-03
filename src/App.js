@@ -1,61 +1,48 @@
-import { useState } from 'react';
-import { Button, Stack } from "react-bootstrap";
-import Container from "react-bootstrap/Container";
-import BudgetCard from "./components/BudgetCard";
-import AddExpenseModal from "./components/AddExpenseModal";
-import AddBudgetModal from "./components/AddBudgetModal";
-import { useBudgets } from "./contexts/BudgetsContext";
+import React from "react";
+import 'bootstrap/dist/css/bootstrap.min.css';
+import Budget from "./components/budget";
+import Remaining from "./components/remaining";
+import ExpenseTotal from "./components/ExpenseTotal";
+import ExpenseList from "./components/ExpenseList";
+import AddExpense from "./components/AddExpense";
+import { AppProvider } from "./context/AppContext";
 
 
-function App() {
-  const [showAddBudgetModal, setShowAddBudgetModal] = useState(false);
-  const [showAddExpenseModal, setShowAddExpenseModal] = useState(false);
-  const [AddExpenseModalBudgetId, setAddExpenseModalBudgetId] = useState();
-  const { budgets, getBudgetExpenses } = useBudgets();
+const App = () => {
+  
+  return(
+    <AppProvider>
+   
+      <div className="container">
+      <h1 className="mt-3">Budget Tracker</h1>
+      <div className="row mt-3">
+        <div className="col-sm">
+          <Budget />
+        </div>
+        <div className="col=sm">
+          <Remaining />
+        </div>
+        <div className="col-sm">
+        <ExpenseTotal />
+        </div>
+      </div>
+      <h3 className="mt-3">My Expenses </h3>
+      <div className="row mt-3">
+        <div className="col-sm">
+          <ExpenseList />
+        </div>
+      </div>
+      <h3 className="mt-3">Add Expense</h3>
+      <div className="mt-3">
+        <div className="col-sm">
+          <AddExpense />
+        </div>
+      </div>
+    </div>
 
-  function openAddExpenseModal(budgetId) {
-    setShowAddExpenseModal(true);
-    setAddExpenseModalBudgetId(budgetId);
-  }
-
-  return (
-    <>
-      <Container className="my-4">
-        <Stack direction="horizontal" gap="2" className="mb-4">
-          <h1 className="me-auto">Budgets</h1>
-          <Button variant="primary" onClick={() => setShowAddBudgetModal(true)}>
-            Add Budget
-          </Button>
-          <Button variant="outline-primary" onClick={openAddExpenseModal}>
-            Add Expense
-          </Button>
-        </Stack>
-        <div
-          style={{
-            display: "grid",
-            gridTemplateColumns: "repeat(auto-fill, minmax(300px, 1fr))",
-            gap: "1rem",
-            alignItems: "flex-start",
-          }}
-        >
-              <BudgetCard
-                name="Entertainment"
-                amount={800}
-                max={1000}
-                >
-              </BudgetCard>
-              </div>
-      </Container>
-      <AddBudgetModal
-        show={showAddBudgetModal}
-        handleClose={() => setShowAddBudgetModal(false)}
-      />
-      <AddExpenseModal
-        show={showAddExpenseModal}
-        setShowAddExpenseModal={setShowAddExpenseModal}
-      />
-    </>
-  );
+    </AppProvider>
+   
+  )
 }
 
 export default App;
