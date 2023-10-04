@@ -25,7 +25,7 @@
     "backend-start": "node server.js",
     "start": "concurrently \"npm run start-js\" \"npm run backend-start\"",
     "build": "npm-run-all build-css && react-scripts build",
-    "build-css": "node-sass src/styles/main.scss -o public/css",
+    "build-css": "echo 'CSS compilation not needed'",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
